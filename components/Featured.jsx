@@ -23,7 +23,7 @@ const Featured = () => {
             <div className={styles.arrowContainer}>
                 <Image src="/images/arrowl.png" layout='fill' style={{left:0}} onClick={()=> handleArrow("l")}/>
             </div>
-            <div className={styles.wrapper}>
+            <div className={styles.wrapper} style={{transform:`translateX(${-100*index}vw)`}}>
                 {images.map((image,i)=>                    
                     <div className={styles.imgContainer} key={i}>
                         <Image src={image} layout='fill' objectFit='contain'/>
